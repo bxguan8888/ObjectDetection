@@ -38,14 +38,14 @@ if __name__ == "__main__":
     mon = None #mx.mon.Monitor(10, norm_stat, pattern=".*backward*.")
 
     # save model
-    checkpoint = mx.callback.do_checkpoint('drive_full_detect')
+    checkpoint = mx.callback.do_checkpoint('models/drive_full_detect', 5)
 
     # Train
     # Try different hyperparamters to get the model converged, (batch_size,
     # optimization method, training epoch, learning rate/scheduler)
     mod.fit(train_data=train_data,
             eval_data=val_data,
-            num_epoch=600,
+            num_epoch=10,
             monitor=mon,
             eval_metric=LossMetric(0.5),
             optimizer='rmsprop',

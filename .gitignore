@@ -1,2 +1,11 @@
-YOLO/pretrained_models/resnet-34-0000.params
 .idea/
+YOLO/DATA_rec/
+*.pyc
+*.params
+*.zip
+*.tar.gz
+*.rec
+*.idx
+*.jpg
+*.idl
+.idea
