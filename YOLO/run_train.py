@@ -14,8 +14,10 @@ root_logger.addHandler(stdout_handler)
 root_logger.setLevel(logging.DEBUG)
 
 if __name__ == "__main__":
-    # example cmd using cpu:
-    # python run_train.py --cpu 1 --train_data_path DATA_rec/drive_small.rec --val_data_path DATA_rec/drive_small.rec --checkpoint_prefix models/drive_small_detect --checkpoint_interval 1 --batch_size 1 --epoch 5 --lambda_noobj 0.5
+    # cmd line example:
+    #   train small dataset
+    #   - running on gpu: python run_train.py --train_data_path DATA_rec/drive_small.rec --val_data_path DATA_rec/drive_small.rec --checkpoint_prefix models/drive_small_detect --checkpoint_interval 10 --batch_size 10 --epoch 200
+    #   - running on cpu: python run_train.py --cpu 1 --train_data_path DATA_rec/drive_small.rec --val_data_path DATA_rec/drive_small.rec --checkpoint_prefix models/drive_small_detect --checkpoint_interval 1 --batch_size 1 --epoch 5 --lambda_noobj 0.5
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--train_data_path', help='train_data_path', default="DATA_rec/drive_full.rec")
