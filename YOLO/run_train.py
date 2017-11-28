@@ -18,6 +18,8 @@ if __name__ == "__main__":
     #   train small dataset
     #   - running on gpu: python run_train.py --train_data_path DATA_rec/drive_small.rec --val_data_path DATA_rec/drive_small.rec --checkpoint_prefix models/drive_small_detect --checkpoint_interval 10 --batch_size 10 --epoch 200
     #   - running on cpu: python run_train.py --cpu 1 --train_data_path DATA_rec/drive_small.rec --val_data_path DATA_rec/drive_small.rec --checkpoint_prefix models/drive_small_detect --checkpoint_interval 1 --batch_size 1 --epoch 5 --lambda_noobj 0.5
+    #   train mid dataset
+    #   - running on gpu: python run_train.py --train_data_path DATA_rec/drive_mid.rec  --val_data_path DATA_rec/drive_mid.rec --checkpoint_prefix models/drive_mid_detect --checkpoint_interval 50 --epoch 400 --learning_rate 0.001 --batch_size 32 --lambda_noobj 0.5
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--train_data_path', help='train_data_path', default="DATA_rec/drive_full.rec")
