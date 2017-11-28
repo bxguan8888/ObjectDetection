@@ -5,7 +5,7 @@ def expit_tensor(x):
 
 
 # Yolo loss
-def YOLO_loss(predict, label):
+def YOLO_loss(predict, label, lambda_noobj):
     """
     predict (params): mx.sym->which is NDarray (tensor), its shape is (batch_size, 7, 7,5 )
     label: same as predict
@@ -23,7 +23,7 @@ def YOLO_loss(predict, label):
     # weight different target differently
     lambda_coord = 5
     lambda_obj = 1
-    lambda_noobj = 0.2
+    lambda_noobj = lambda_noobj
     mask = cl*lambda_obj+(1-cl)*lambda_noobj
 
     # linear regression
@@ -145,7 +145,7 @@ def fcrn_loss_YoloV2(label, pred, anchors, config):
 
 
 # Get pretrained imagenet model
-def get_resnet_model(model_path, epoch):
+def get_resnet_model(model_path, epoch, lambda_noobj):
     # not necessary to be this name, you can do better
     label = mx.sym.Variable('softmax_label')
     # load symbol and actual weights
@@ -162,7 +162,7 @@ def get_resnet_model(model_path, epoch):
     sym = sym / (1 + mx.sym.abs(sym))
     logit = mx.sym.transpose(sym, axes=(0, 2, 3, 1), name="logit") # (-1, 7, 7, 5(c,x,y,w,h))
     # apply loss
-    loss_ = YOLO_loss(logit, label)
+    loss_ = YOLO_loss(logit, label, lambda_noobj)
     # mxnet special requirement
     loss = mx.sym.MakeLoss(loss_)
     # multi-output logit should be blocked from generating gradients

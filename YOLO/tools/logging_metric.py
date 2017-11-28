@@ -79,6 +79,8 @@ class LossMetric(mx.metric.EvalMetric):
         self.sum_fp = np.sum(boxes_pred * (1 - c_label))
 
         num_boxes = np.sum(c_label)
+        if num_boxes == 0:
+            num_boxes = 0.0001
         self.sum_conf = np.sum(np.abs(c_pred - c_label)) / \
                         (self.grid * label.shape[0])
         self.sum_x = np.sum((np.abs(pred[:, :, 1] - label[:, :, 1])) * c_label) * self.stride / num_boxes
