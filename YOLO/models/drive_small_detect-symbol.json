@@ -18,7 +18,7 @@
     {
       "op": "null", 
       "name": "bn_data_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "True", 
@@ -30,7 +30,7 @@
     {
       "op": "null", 
       "name": "bn_data_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "True", 
@@ -42,7 +42,7 @@
     {
       "op": "BatchNorm", 
       "name": "bn_data", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "True", 
         "momentum": "0.9", 
@@ -58,7 +58,7 @@
     {
       "op": "Convolution", 
       "name": "conv0", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -85,7 +85,7 @@
     {
       "op": "null", 
       "name": "bn0_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -97,7 +97,7 @@
     {
       "op": "null", 
       "name": "bn0_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -109,7 +109,7 @@
     {
       "op": "BatchNorm", 
       "name": "bn0", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -120,13 +120,13 @@
     {
       "op": "Activation", 
       "name": "relu0", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[12, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pooling0", 
-      "attrs": {
+      "attr": {
         "global_pool": "False", 
         "kernel": "(3,3)", 
         "pad": "(1,1)", 
@@ -149,7 +149,7 @@
     {
       "op": "null", 
       "name": "stage1_unit1_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -161,7 +161,7 @@
     {
       "op": "null", 
       "name": "stage1_unit1_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -173,7 +173,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage1_unit1_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -184,7 +184,7 @@
     {
       "op": "Activation", 
       "name": "stage1_unit1_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[19, 0, 0]]
     }, 
     {
@@ -195,7 +195,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit1_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -222,7 +222,7 @@
     {
       "op": "null", 
       "name": "stage1_unit1_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -234,7 +234,7 @@
     {
       "op": "null", 
       "name": "stage1_unit1_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -246,7 +246,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage1_unit1_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -257,7 +257,7 @@
     {
       "op": "Activation", 
       "name": "stage1_unit1_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[27, 0, 0]]
     }, 
     {
@@ -268,7 +268,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit1_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -290,7 +290,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit1_sc", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -322,7 +322,7 @@
     {
       "op": "null", 
       "name": "stage1_unit2_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -334,7 +334,7 @@
     {
       "op": "null", 
       "name": "stage1_unit2_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -346,7 +346,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage1_unit2_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -357,7 +357,7 @@
     {
       "op": "Activation", 
       "name": "stage1_unit2_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[38, 0, 0]]
     }, 
     {
@@ -368,7 +368,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit2_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -395,7 +395,7 @@
     {
       "op": "null", 
       "name": "stage1_unit2_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -407,7 +407,7 @@
     {
       "op": "null", 
       "name": "stage1_unit2_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -419,7 +419,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage1_unit2_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -430,7 +430,7 @@
     {
       "op": "Activation", 
       "name": "stage1_unit2_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[46, 0, 0]]
     }, 
     {
@@ -441,7 +441,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit2_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -473,7 +473,7 @@
     {
       "op": "null", 
       "name": "stage1_unit3_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -485,7 +485,7 @@
     {
       "op": "null", 
       "name": "stage1_unit3_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -497,7 +497,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage1_unit3_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -508,7 +508,7 @@
     {
       "op": "Activation", 
       "name": "stage1_unit3_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[55, 0, 0]]
     }, 
     {
@@ -519,7 +519,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit3_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -546,7 +546,7 @@
     {
       "op": "null", 
       "name": "stage1_unit3_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -558,7 +558,7 @@
     {
       "op": "null", 
       "name": "stage1_unit3_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -570,7 +570,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage1_unit3_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -581,7 +581,7 @@
     {
       "op": "Activation", 
       "name": "stage1_unit3_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[63, 0, 0]]
     }, 
     {
@@ -592,7 +592,7 @@
     {
       "op": "Convolution", 
       "name": "stage1_unit3_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -624,7 +624,7 @@
     {
       "op": "null", 
       "name": "stage2_unit1_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -636,7 +636,7 @@
     {
       "op": "null", 
       "name": "stage2_unit1_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -648,7 +648,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit1_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -659,7 +659,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit1_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[72, 0, 0]]
     }, 
     {
@@ -670,7 +670,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit1_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -697,7 +697,7 @@
     {
       "op": "null", 
       "name": "stage2_unit1_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -709,7 +709,7 @@
     {
       "op": "null", 
       "name": "stage2_unit1_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -721,7 +721,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit1_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -732,7 +732,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit1_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[80, 0, 0]]
     }, 
     {
@@ -743,7 +743,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit1_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -765,7 +765,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit1_sc", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -797,7 +797,7 @@
     {
       "op": "null", 
       "name": "stage2_unit2_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -809,7 +809,7 @@
     {
       "op": "null", 
       "name": "stage2_unit2_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -821,7 +821,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit2_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -832,7 +832,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit2_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[91, 0, 0]]
     }, 
     {
@@ -843,7 +843,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit2_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -870,7 +870,7 @@
     {
       "op": "null", 
       "name": "stage2_unit2_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -882,7 +882,7 @@
     {
       "op": "null", 
       "name": "stage2_unit2_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -894,7 +894,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit2_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -905,7 +905,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit2_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[99, 0, 0]]
     }, 
     {
@@ -916,7 +916,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit2_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -948,7 +948,7 @@
     {
       "op": "null", 
       "name": "stage2_unit3_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -960,7 +960,7 @@
     {
       "op": "null", 
       "name": "stage2_unit3_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -972,7 +972,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit3_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -983,7 +983,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit3_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[108, 0, 0]]
     }, 
     {
@@ -994,7 +994,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit3_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1021,7 +1021,7 @@
     {
       "op": "null", 
       "name": "stage2_unit3_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1033,7 +1033,7 @@
     {
       "op": "null", 
       "name": "stage2_unit3_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1045,7 +1045,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit3_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1056,7 +1056,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit3_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[116, 0, 0]]
     }, 
     {
@@ -1067,7 +1067,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit3_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1099,7 +1099,7 @@
     {
       "op": "null", 
       "name": "stage2_unit4_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1111,7 +1111,7 @@
     {
       "op": "null", 
       "name": "stage2_unit4_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1123,7 +1123,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit4_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1134,7 +1134,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit4_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[125, 0, 0]]
     }, 
     {
@@ -1145,7 +1145,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit4_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1172,7 +1172,7 @@
     {
       "op": "null", 
       "name": "stage2_unit4_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1184,7 +1184,7 @@
     {
       "op": "null", 
       "name": "stage2_unit4_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1196,7 +1196,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage2_unit4_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1207,7 +1207,7 @@
     {
       "op": "Activation", 
       "name": "stage2_unit4_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[133, 0, 0]]
     }, 
     {
@@ -1218,7 +1218,7 @@
     {
       "op": "Convolution", 
       "name": "stage2_unit4_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1250,7 +1250,7 @@
     {
       "op": "null", 
       "name": "stage3_unit1_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1262,7 +1262,7 @@
     {
       "op": "null", 
       "name": "stage3_unit1_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1274,7 +1274,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit1_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1285,7 +1285,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit1_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[142, 0, 0]]
     }, 
     {
@@ -1296,7 +1296,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit1_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1323,7 +1323,7 @@
     {
       "op": "null", 
       "name": "stage3_unit1_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1335,7 +1335,7 @@
     {
       "op": "null", 
       "name": "stage3_unit1_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1347,7 +1347,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit1_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1358,7 +1358,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit1_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[150, 0, 0]]
     }, 
     {
@@ -1369,7 +1369,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit1_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1391,7 +1391,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit1_sc", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1423,7 +1423,7 @@
     {
       "op": "null", 
       "name": "stage3_unit2_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1435,7 +1435,7 @@
     {
       "op": "null", 
       "name": "stage3_unit2_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1447,7 +1447,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit2_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1458,7 +1458,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit2_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[161, 0, 0]]
     }, 
     {
@@ -1469,7 +1469,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit2_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1496,7 +1496,7 @@
     {
       "op": "null", 
       "name": "stage3_unit2_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1508,7 +1508,7 @@
     {
       "op": "null", 
       "name": "stage3_unit2_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1520,7 +1520,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit2_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1531,7 +1531,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit2_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[169, 0, 0]]
     }, 
     {
@@ -1542,7 +1542,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit2_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1574,7 +1574,7 @@
     {
       "op": "null", 
       "name": "stage3_unit3_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1586,7 +1586,7 @@
     {
       "op": "null", 
       "name": "stage3_unit3_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1598,7 +1598,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit3_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1609,7 +1609,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit3_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[178, 0, 0]]
     }, 
     {
@@ -1620,7 +1620,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit3_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1647,7 +1647,7 @@
     {
       "op": "null", 
       "name": "stage3_unit3_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1659,7 +1659,7 @@
     {
       "op": "null", 
       "name": "stage3_unit3_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1671,7 +1671,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit3_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1682,7 +1682,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit3_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[186, 0, 0]]
     }, 
     {
@@ -1693,7 +1693,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit3_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1725,7 +1725,7 @@
     {
       "op": "null", 
       "name": "stage3_unit4_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1737,7 +1737,7 @@
     {
       "op": "null", 
       "name": "stage3_unit4_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1749,7 +1749,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit4_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1760,7 +1760,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit4_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[195, 0, 0]]
     }, 
     {
@@ -1771,7 +1771,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit4_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1798,7 +1798,7 @@
     {
       "op": "null", 
       "name": "stage3_unit4_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1810,7 +1810,7 @@
     {
       "op": "null", 
       "name": "stage3_unit4_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1822,7 +1822,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit4_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1833,7 +1833,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit4_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[203, 0, 0]]
     }, 
     {
@@ -1844,7 +1844,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit4_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1876,7 +1876,7 @@
     {
       "op": "null", 
       "name": "stage3_unit5_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1888,7 +1888,7 @@
     {
       "op": "null", 
       "name": "stage3_unit5_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1900,7 +1900,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit5_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1911,7 +1911,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit5_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[212, 0, 0]]
     }, 
     {
@@ -1922,7 +1922,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit5_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -1949,7 +1949,7 @@
     {
       "op": "null", 
       "name": "stage3_unit5_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1961,7 +1961,7 @@
     {
       "op": "null", 
       "name": "stage3_unit5_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -1973,7 +1973,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit5_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -1984,7 +1984,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit5_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[220, 0, 0]]
     }, 
     {
@@ -1995,7 +1995,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit5_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2027,7 +2027,7 @@
     {
       "op": "null", 
       "name": "stage3_unit6_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2039,7 +2039,7 @@
     {
       "op": "null", 
       "name": "stage3_unit6_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2051,7 +2051,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit6_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2062,7 +2062,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit6_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[229, 0, 0]]
     }, 
     {
@@ -2073,7 +2073,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit6_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2100,7 +2100,7 @@
     {
       "op": "null", 
       "name": "stage3_unit6_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2112,7 +2112,7 @@
     {
       "op": "null", 
       "name": "stage3_unit6_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2124,7 +2124,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage3_unit6_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2135,7 +2135,7 @@
     {
       "op": "Activation", 
       "name": "stage3_unit6_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[237, 0, 0]]
     }, 
     {
@@ -2146,7 +2146,7 @@
     {
       "op": "Convolution", 
       "name": "stage3_unit6_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2178,7 +2178,7 @@
     {
       "op": "null", 
       "name": "stage4_unit1_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2190,7 +2190,7 @@
     {
       "op": "null", 
       "name": "stage4_unit1_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2202,7 +2202,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage4_unit1_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2213,7 +2213,7 @@
     {
       "op": "Activation", 
       "name": "stage4_unit1_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[246, 0, 0]]
     }, 
     {
@@ -2224,7 +2224,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit1_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2251,7 +2251,7 @@
     {
       "op": "null", 
       "name": "stage4_unit1_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2263,7 +2263,7 @@
     {
       "op": "null", 
       "name": "stage4_unit1_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2275,7 +2275,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage4_unit1_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2286,7 +2286,7 @@
     {
       "op": "Activation", 
       "name": "stage4_unit1_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[254, 0, 0]]
     }, 
     {
@@ -2297,7 +2297,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit1_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2319,7 +2319,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit1_sc", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2351,7 +2351,7 @@
     {
       "op": "null", 
       "name": "stage4_unit2_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2363,7 +2363,7 @@
     {
       "op": "null", 
       "name": "stage4_unit2_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2375,7 +2375,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage4_unit2_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2386,7 +2386,7 @@
     {
       "op": "Activation", 
       "name": "stage4_unit2_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[265, 0, 0]]
     }, 
     {
@@ -2397,7 +2397,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit2_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2424,7 +2424,7 @@
     {
       "op": "null", 
       "name": "stage4_unit2_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2436,7 +2436,7 @@
     {
       "op": "null", 
       "name": "stage4_unit2_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2448,7 +2448,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage4_unit2_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2459,7 +2459,7 @@
     {
       "op": "Activation", 
       "name": "stage4_unit2_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[273, 0, 0]]
     }, 
     {
@@ -2470,7 +2470,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit2_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2502,7 +2502,7 @@
     {
       "op": "null", 
       "name": "stage4_unit3_bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2514,7 +2514,7 @@
     {
       "op": "null", 
       "name": "stage4_unit3_bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2526,7 +2526,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage4_unit3_bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2537,7 +2537,7 @@
     {
       "op": "Activation", 
       "name": "stage4_unit3_relu1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[282, 0, 0]]
     }, 
     {
@@ -2548,7 +2548,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit3_conv1", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2575,7 +2575,7 @@
     {
       "op": "null", 
       "name": "stage4_unit3_bn2_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2587,7 +2587,7 @@
     {
       "op": "null", 
       "name": "stage4_unit3_bn2_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2599,7 +2599,7 @@
     {
       "op": "BatchNorm", 
       "name": "stage4_unit3_bn2", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2610,7 +2610,7 @@
     {
       "op": "Activation", 
       "name": "stage4_unit3_relu2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[290, 0, 0]]
     }, 
     {
@@ -2621,7 +2621,7 @@
     {
       "op": "Convolution", 
       "name": "stage4_unit3_conv2", 
-      "attrs": {
+      "attr": {
         "cudnn_off": "False", 
         "cudnn_tune": "limited_workspace", 
         "dilate": "(1,1)", 
@@ -2653,7 +2653,7 @@
     {
       "op": "null", 
       "name": "bn1_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2665,7 +2665,7 @@
     {
       "op": "null", 
       "name": "bn1_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "eps": "2e-05", 
         "fix_gamma": "False", 
@@ -2677,7 +2677,7 @@
     {
       "op": "BatchNorm", 
       "name": "bn1", 
-      "attrs": {
+      "attr": {
         "eps": "2e-05", 
         "fix_gamma": "False", 
         "momentum": "0.9", 
@@ -2688,13 +2688,13 @@
     {
       "op": "Activation", 
       "name": "relu_final", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[299, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "convolution0_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "9", 
@@ -2706,7 +2706,7 @@
     {
       "op": "Convolution", 
       "name": "convolution0", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "9", 
@@ -2723,42 +2723,42 @@
     {
       "op": "_plus_scalar", 
       "name": "_plusscalar0", 
-      "attrs": {"scalar": "1"}, 
+      "attr": {"scalar": "1"}, 
       "inputs": [[303, 0, 0]]
     }, 
     {
-      "op": "elemwise_div", 
+      "op": "_div", 
       "name": "_div0", 
       "inputs": [[302, 0, 0], [304, 0, 0]]
     }, 
     {
       "op": "transpose", 
       "name": "logit", 
-      "attrs": {"axes": "(0, 2, 3, 1)"}, 
+      "attr": {"axes": "(0, 2, 3, 1)"}, 
       "inputs": [[305, 0, 0]]
     }, 
     {
       "op": "Reshape", 
       "name": "reshape0", 
-      "attrs": {"shape": "(-1, 49, 9)"}, 
+      "attr": {"shape": "(-1, 49, 9)"}, 
       "inputs": [[306, 0, 0]]
     }, 
     {
       "op": "_plus_scalar", 
       "name": "_plusscalar1", 
-      "attrs": {"scalar": "1"}, 
+      "attr": {"scalar": "1"}, 
       "inputs": [[307, 0, 0]]
     }, 
     {
       "op": "_div_scalar", 
       "name": "_divscalar0", 
-      "attrs": {"scalar": "2"}, 
+      "attr": {"scalar": "2"}, 
       "inputs": [[308, 0, 0]]
     }, 
     {
       "op": "SliceChannel", 
       "name": "split1", 
-      "attrs": {
+      "attr": {
         "axis": "2", 
         "num_outputs": "9"
       }, 
@@ -2772,13 +2772,13 @@
     {
       "op": "Reshape", 
       "name": "reshape1", 
-      "attrs": {"shape": "(-1, 49, 9)"}, 
+      "attr": {"shape": "(-1, 49, 9)"}, 
       "inputs": [[311, 0, 0]]
     }, 
     {
       "op": "SliceChannel", 
       "name": "split0", 
-      "attrs": {
+      "attr": {
         "axis": "2", 
         "num_outputs": "9"
       }, 
@@ -2787,19 +2787,19 @@
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar0", 
-      "attrs": {"scalar": "1"}, 
+      "attr": {"scalar": "1"}, 
       "inputs": [[313, 0, 0]]
     }, 
     {
       "op": "_rminus_scalar", 
       "name": "_rminusscalar0", 
-      "attrs": {"scalar": "1"}, 
+      "attr": {"scalar": "1"}, 
       "inputs": [[313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar1", 
-      "attrs": {"scalar": "0.0"}, 
+      "attr": {"scalar": "0.2"}, 
       "inputs": [[315, 0, 0]]
     }, 
     {
@@ -2808,12 +2808,12 @@
       "inputs": [[314, 0, 0], [316, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul1", 
       "inputs": [[310, 0, 0], [317, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul0", 
       "inputs": [[313, 0, 0], [317, 0, 0]]
     }, 
@@ -2823,25 +2823,25 @@
       "inputs": [[318, 0, 0], [319, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul3", 
       "inputs": [[310, 1, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar3", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[321, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul2", 
       "inputs": [[313, 1, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar2", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[323, 0, 0]]
     }, 
     {
@@ -2855,25 +2855,25 @@
       "inputs": [[320, 0, 0], [325, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul5", 
       "inputs": [[310, 2, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar5", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[327, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul4", 
       "inputs": [[313, 2, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar4", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[329, 0, 0]]
     }, 
     {
@@ -2892,14 +2892,14 @@
       "inputs": [[310, 3, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul7", 
       "inputs": [[333, 0, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar7", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[334, 0, 0]]
     }, 
     {
@@ -2908,14 +2908,14 @@
       "inputs": [[313, 3, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul6", 
       "inputs": [[336, 0, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar6", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[337, 0, 0]]
     }, 
     {
@@ -2934,14 +2934,14 @@
       "inputs": [[310, 4, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul9", 
       "inputs": [[341, 0, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar9", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[342, 0, 0]]
     }, 
     {
@@ -2950,14 +2950,14 @@
       "inputs": [[313, 4, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul8", 
       "inputs": [[344, 0, 0], [313, 0, 0]]
     }, 
     {
       "op": "_mul_scalar", 
       "name": "_mulscalar8", 
-      "attrs": {"scalar": "5"}, 
+      "attr": {"scalar": "5"}, 
       "inputs": [[345, 0, 0]]
     }, 
     {
@@ -2971,12 +2971,12 @@
       "inputs": [[340, 0, 0], [347, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul11", 
       "inputs": [[310, 5, 0], [313, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul10", 
       "inputs": [[313, 5, 0], [313, 0, 0]]
     }, 
@@ -2986,12 +2986,12 @@
       "inputs": [[349, 0, 0], [350, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul13", 
       "inputs": [[310, 6, 0], [313, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul12", 
       "inputs": [[313, 6, 0], [313, 0, 0]]
     }, 
@@ -3006,12 +3006,12 @@
       "inputs": [[351, 0, 0], [354, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul15", 
       "inputs": [[310, 7, 0], [313, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul14", 
       "inputs": [[313, 7, 0], [313, 0, 0]]
     }, 
@@ -3026,12 +3026,12 @@
       "inputs": [[355, 0, 0], [358, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul17", 
       "inputs": [[310, 8, 0], [313, 0, 0]]
     }, 
     {
-      "op": "elemwise_mul", 
+      "op": "_mul", 
       "name": "_mul16", 
       "inputs": [[313, 8, 0], [313, 0, 0]]
     }, 
@@ -3614,5 +3614,5 @@
     453
   ], 
   "heads": [[365, 0, 0], [366, 0, 0]], 
-  "attrs": {"mxnet_version": ["int", 1200]}
+  "attrs": {"mxnet_version": ["int", 1100]}
 }
