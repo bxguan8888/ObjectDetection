@@ -1,4 +1,5 @@
 .idea/
+YOLO/logs/
 YOLO/DATA_rec/
 *.pyc
 *.params
