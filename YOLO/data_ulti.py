@@ -2,8 +2,9 @@ import mxnet as mx
 import numpy as np
 import cv2
 import json
+import random
 
-IMGROOT = "./DATA/training/training/"
+IMGROOT = "/Users/boxuanguan/Documents/python/object_detection_temp/Autonomous-Yolo/DATA/training/"
 # get iterator
 def get_iterator(path, data_shape, label_width, batch_size, shuffle=False):
     iterator = mx.io.ImageRecordIter(path_imgrec=path,
@@ -49,10 +50,9 @@ def imgResizeBBoxTransform(img, bbox, sizet, grid_size=(7,7,5), dscale=32):
 
 
 # Convert raw images to rec files
-def toRecFile(imgroot, imglist, annotation, sizet, grid_size, dscale):
-
-    record = mx.recordio.MXIndexedRecordIO("drive_full.idx",
-                                           "drive_full.rec", 'w')
+def toRecFile(idx_file_path, rec_file_path, imgroot, imglist, annotation, sizet, grid_size, dscale):
+    record = mx.recordio.MXIndexedRecordIO(idx_file_path,
+                                           rec_file_path, 'w')
     for i in range(len(imglist)):
         imgname = imglist[i]
         img = cv2.imread(imgroot+imgname)
@@ -73,7 +73,7 @@ def idltonumpy(idlfile, savepath):
             jsonload = json.loads(line)
             assert len(jsonload.keys()) == 1, "Only one image per json file"
             label_np[jsonload.keys()[0]] = jsonload[jsonload.keys()[0]]
-    np.save(save_path, label_np)
+    np.save(savepath, label_np)
     return label_np
 
 
@@ -108,13 +108,48 @@ def xy2wh(idlnpy):
     return labelwh
 
 
-
-if __name__ == "__main__":
+def generate_rec_file(idx_file_path, rec_file_path, labelfile, save_path):
     # transform jpg to rec file
-    labelfile = "./DATA/training/training/label.idl"
-    save_path = "./DATA/label.npy"
     idlnpy= idltonumpy(labelfile, save_path)
     labelwh = xy2wh(idlnpy)
     imglist = labelwh.keys()
     sizet = 224
-    toRecFile(IMGROOT, imglist, labelwh, sizet, (7,7,9), 32)
+    toRecFile(idx_file_path, rec_file_path, IMGROOT, imglist, labelwh, sizet, (7,7,9), 32)
+
+def save_label(label_save_path, training_label):
+    f = open(label_save_path, 'w')
+    for line in training_label:
+        f.write(line)
+    f.close()
+
+def create_training_and_val_label():
+    labelfile = "/Users/boxuanguan/Documents/python/object_detection_temp/Autonomous-Yolo/DATA/training/label.idl"
+    label_arr = []
+    with open(labelfile) as f:
+        for line in f:
+            label_arr.append(line)
+
+    random.shuffle(label_arr)
+
+    training_label = label_arr[:8000]
+    val_label = label_arr[8000:]
+
+    save_label("DATA/training.idl", training_label)
+    save_label("DATA/val.idl", val_label)
+
+
+if __name__ == "__main__":
+    # run this line to create training and val label
+    # create_training_and_val_label()
+
+    training_label = "DATA/training/training.idl"
+    save_path = "./DATA/label.npy"
+    training_idx_file_path = "DATA_rec/training.idx"
+    training_rec_file_path = "DATA_rec/training.rec"
+    generate_rec_file(training_idx_file_path, training_rec_file_path, training_label, save_path)
+
+    training_label = "DATA/training/val.idl"
+    save_path = "./DATA/label.npy"
+    training_idx_file_path = "DATA_rec/val.idx"
+    training_rec_file_path = "DATA_rec/val.rec"
+    generate_rec_file(training_idx_file_path, training_rec_file_path, training_label, save_path)

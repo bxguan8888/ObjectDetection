@@ -12,11 +12,10 @@ class LogMetricsCallback(object):
         except ImportError:
             logging.error('You can install tensorboard via `pip install tensorboard`.')
 
-    def __call__(self, param):
+    def __call__(self, name_value):
         """Callback to log training speed and metrics in TensorBoard."""
-        if param.eval_metric is None:
+        if name_value is None:
             return
-        name_value = param.eval_metric.get_name_value()
         for name, value in name_value:
             if self.prefix is not None:
                 name = '%s-%s' % (self.prefix, name)
